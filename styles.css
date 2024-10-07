@@ -251,36 +251,98 @@ nav {
 
 
   /* Skills Section */
-  .skills-section {
-    padding: 50px 0;
-  }
-  
-  #skillsChart {
-    max-width: 100%;
-    height: 400px;
-  }
-  
-  /* Projects Section */
-  .projects-section {
-    padding: 50px 0;
-  }
-  
-  .project-grid {
+  .skills-container {
     display: flex;
-    justify-content: space-between;
-  }
-  
-  .project-card {
-    background-color: #333;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Spacing between skill items */
+}
+
+.skill {
+    flex: 0 0 20%; /* Each skill takes 20% of the row, 5 skills per row */
+    text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    width: 45%;
+}
+
+.skill-logo {
+    width: 200px; /* Logo width */
+    height: 170px; /* Logo height */
+    background-color: transparent; /* Ensure no background color */
+}
+
+  /* #certifications Section */
+  #certifications {
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    padding: 50px 20px;
     text-align: center;
   }
   
-  .project-card img {
-    width: 100%;
+  #certifications h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #ffcc33;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .certifications-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three certificates per row */
+    gap: 20px;
+  }
+  
+  .certification-card {
+    background: linear-gradient(135deg, #222, #444);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+  }
+  
+  .certification-card h3 {
+    font-size: 22px;
+    color: #ffcc33;
+    margin: 15px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .certification-card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #cccccc;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .certification-card strong {
+    color: #ffcc33;
+  }
+  
+  .certification-image {
+    width: 100%; /* Full width within its container */
+    height: 250px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
     border-radius: 10px;
+    border: 3px solid #ffcc33;
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .certification-image:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    box-shadow: 0 8px 15px rgba(255, 204, 51, 0.8);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 900px) {
+    .certifications-container {
+      grid-template-columns: 1fr; /* Single column layout for smaller screens */
+      gap: 30px;
+    }
   }
   
   /* Contact Section */
@@ -293,5 +355,6 @@ nav {
     text-align: center;
     padding: 20px;
     background-color: #111;
+    color: white;
   }
   
