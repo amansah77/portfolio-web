@@ -92,8 +92,6 @@ nav {
     background:#ff5733;
     position: relative;
     cursor: pointer;
-
-
 }
 
   /* Home Section */
@@ -444,12 +442,138 @@ button:hover {
     }
   }
   
-  /* Contact Section */
-  .contact-section {
-    padding: 50px 0;
-    text-align: center;
+/* Background section */
+#contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('boy.png');
+  color: #fff;
+}
+/* Contact container */
+.contact-container {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  width: 100%;
+  background-color: transparent;
+  margin-left: 550px;
+}
+
+/* Form styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #444;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  background-color: #555;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-container button, .contact-container input[type="submit"] {
+  padding: 10px;
+  background-color: orangered;
+  border: solid;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 200px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin: auto;  /* Center horizontally */
+  display: block; 
+  margin-top: 30px;
+}
+
+.contact-container button:hover, .contact-container input[type="submit"]:hover {
+  background-color: #48a;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .contact-container button, .contact-container input[type="submit"] {
+      width: 100%; /* Full width on mobile */
   }
+}
+
+button:hover {
+  background-color: #48a;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Social media icons */
+.social-media {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-media a img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+.social-media a img:hover {
+  transform: scale(1.2);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  #contact {
+      flex-direction: column;
+      justify-content: center;
+  }
+
   
+  .form-container {
+      padding: 20px;
+  }
+}
+
   footer {
     text-align: center;
     padding: 20px;

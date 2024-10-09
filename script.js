@@ -25,16 +25,6 @@ function slideExperience() {
     document.querySelector('.experience-container').style.transform = `translateX(${offset}%)`;
 }
 
-document.getElementById('nextButton').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalItems; // Move to next item
-    slideExperience();
-});
-
-document.getElementById('prevButton').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Move to previous item
-    slideExperience();
-});
-
 // Automatic sliding every 5 seconds
 setInterval(() => {
     currentIndex = (currentIndex + 1) % totalItems; // Move to next item
