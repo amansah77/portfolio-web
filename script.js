@@ -1,12 +1,12 @@
+const heading = document.querySelector('.typewriter');
 
-    const heading = document.querySelector('.intro-text h1');
+// Listen for the animation to end and remove the blinking cursor
+heading.addEventListener('animationend', (event) => {
+    if (event.animationName === 'typewriter') {
+        heading.classList.add('revert'); // Adds the class to stop cursor
+    }
+});
 
-    // Listen for the animation to end and remove the blinking cursor
-    heading.addEventListener('animationend', (event) => {
-        if (event.animationName === 'typewriter') {
-            heading.classList.add('revert'); // Adds the class to stop cursor and revert styles
-        }
-    });
 //about me
     function showSection(sectionId) {
         const sections = document.querySelectorAll('.about-detail');
@@ -16,7 +16,8 @@
         document.getElementById(sectionId).style.display = 'block'; // Show the selected section
     }
 
-    let currentIndex = 0;
+
+let currentIndex = 0;
 const items = document.querySelectorAll('.experience-item');
 const totalItems = items.length;
 
@@ -30,3 +31,20 @@ setInterval(() => {
     currentIndex = (currentIndex + 1) % totalItems; // Move to next item
     slideExperience();
 }, 5000);
+
+ // Menu show/hide
+ function showmenu() {
+    document.getElementById("navlinks").style.right = "0";
+  }
+
+  function hidemenu() {
+    document.getElementById("navlinks").style.right = "-200px";
+  }
+
+  // Section show/hide
+  function showSection(sectionId) {
+    document.querySelectorAll('.about-detail').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+  }

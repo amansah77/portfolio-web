@@ -84,7 +84,7 @@ nav {
 .nav-links a:hover {
     color: #ff5733; /* Change color on hover */
 }
-.BUTTON{
+.BUTTON1{
     display: inline-block;
     text-decoration: none;
     border: 1px solid white;
@@ -263,7 +263,7 @@ h2 {
   text-align: center;
   font-size: 2.5rem; /* Increased font size for the title */
   margin-bottom: 30px; /* Space below the title */
-  color: #00bfff; /* Light blue color for the title */
+  color: #ffcc33; /* Light blue color for the title */
 }
 
 /* Slider Styles */
@@ -348,28 +348,47 @@ button:hover {
 
 
   /* Skills Section */
-  .skills-container {
+  #skills {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #0d0d0d;
+}
+
+#skills h2 {
+    color: #ffcc33;
+}
+
+.skills-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Spacing between skill items */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .skill {
-    flex: 0 0 20%; /* Each skill takes 20% of the row, 5 skills per row */
+    flex-basis: calc(20% - 20px);
     text-align: center;
-    padding: 20px;
 }
 
 .skill-logo {
-    width: 200px; /* Logo width */
-    height: 170px; /* Logo height */
-    background-color: transparent; /* Ensure no background color */
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
 }
+
+.skill-logo:hover {
+    transform: scale(1.1);
+}
+
+.skill p {
+    color: #fff;
+    margin-top: 10px;
+}
+
 
   /* #certifications Section */
   #certifications {
-    background-color: #0d0d0d;
+    background-color: black;
     color: #f1f1f1;
     padding: 50px 20px;
     text-align: center;
@@ -525,7 +544,7 @@ textarea {
 }
 
 .contact-container button:hover, .contact-container input[type="submit"]:hover {
-  background-color: #48a;
+  background-color: #009acd;
 }
 
 /* For smaller screens */
@@ -536,7 +555,7 @@ textarea {
 }
 
 button:hover {
-  background-color: #48a;
+  background-color: #ffcc33;
 }
 
 #status {
@@ -546,15 +565,10 @@ button:hover {
 
 /* Social media icons */
 .social-media {
-  margin-top: 20px;
+  margin-top: 5px;
   display: flex;
   justify-content: center;
-  gap: 15px;
-}
-
-.social-media a img {
-  width: 30px;
-  transition: transform 0.3s;
+  gap: 25px;
 }
 
 .social-media a img:hover {
@@ -574,10 +588,43 @@ button:hover {
   }
 }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: white;
-  }
+.footer {
+  background-color: #000000; /* Black background */
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff; /* White text */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-socials {
+  margin-bottom: 10px;
+}
+
+.footer-socials a {
+  margin: 0 9px; /* Space between icons (30px total gap) */
+  text-decoration: none;
+}
+
+.footer-text {
+  font-size: 18px;
+  color: #b0b0b0; /* Slightly dimmed white text */
+  margin-top: 10px;
+}
+.footer-text1 a {
+  font-size: 18px;
+  color: #ffcc33; /* Slightly dimmed white text */
+  margin-top: 10px;
+  text-decoration: none;
+}
   
