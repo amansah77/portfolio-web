@@ -111,6 +111,7 @@ nav {
   }
   
   .intro-text h1 span {
+    font-family: 'Times New Roman', serif;
     color: #ff5733;
   }
   /* Typewriter Effect */
@@ -153,7 +154,7 @@ nav {
   .intro-image img {
     width: 400px;
     border-radius:50px;
-    transform: translateY(-150px);
+    transform: translateY(-145px);
     /* Moves the image 20px up */
     
   }
@@ -246,13 +247,6 @@ nav {
 .about-details li {
     margin: 5px 0;
 }
-
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif; /* Use a clean and professional font */
-  color: #ffffff; /* Set text color to white for contrast */
-}
-
 /* Experience Section Styles */
 #experience {
   padding: 50px 0; 
@@ -398,7 +392,6 @@ button:hover {
     font-size: 40px;
     margin-bottom: 25px;
     color: #ffcc33;
-    font-family: 'Poppins', sans-serif;
   }
   
   .certifications-container {
@@ -413,6 +406,8 @@ button:hover {
     padding: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Poppins', sans-serif;
+
   }
   
   .certification-card:hover {
