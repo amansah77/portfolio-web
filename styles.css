@@ -247,7 +247,29 @@ nav {
 .about-details li {
     margin: 5px 0;
 }
-/* Experience Section Styles */
+.achievement-content {
+  display: flex;
+  align-items: center;
+}
+.achievement-image {
+  flex: 0 0 300px;
+  margin-left: 20px;
+  
+}
+.achievement-image:hover {
+  transform: scale(1.05); /* Slight scaling effect on hover */
+  box-shadow: 0 8px 15px rgba(255, 204, 51, 0.8);
+}
+.achievement-image img {
+  width: 100%; /* Full width within its container */
+  height: auto; /* Auto height for responsive scaling */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid #ffcc33; /* Border matching your certification style */
+  margin-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for scaling and shadow */
+}
+/*Experience Section Styles */
 #experience {
   padding: 50px 0; 
   background-color: #001f3f; /* Dark navy background for the section */
@@ -263,7 +285,7 @@ h2 {
 /* Slider Styles */
 .experience-slider {
   overflow: hidden; /* Hide overflow to show only one item */
-  width: 90%; /* Adjust width as needed */
+  width: 95%; /* Adjust width as needed */
   margin: 0 auto; /* Center the slider */
   border-radius: 10px; /* Rounded corners for the slider */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
@@ -466,6 +488,7 @@ button:hover {
   width: 100%;
   height: 100vh;
   background-image: url('boy.png');
+  background-color:#17212c;
   color: #fff;
 }
 /* Contact container */

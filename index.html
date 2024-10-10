@@ -54,9 +54,9 @@
             </p>
             <nav class="about-nav">
                 <ul>
-                    <li><a href="#info" onclick="showSection('info')">Info</a></li>
-                    <li><a href="#education" onclick="showSection('education')">Education</a></li>
-                    <li><a href="#courses" onclick="showSection('courses')">Courses</a></li>
+                    <li><a href="#aboutme" onclick="showSection('info')">Info</a></li>
+                    <li><a href="#aboutme" onclick="showSection('education')">Education</a></li>
+                    <li><a href="#aboutme" onclick="showSection('achievements')">Achievements</a></li>
                 </ul>
             </nav>
             <div class="about-details">
@@ -73,15 +73,19 @@
                     <h3>Education</h3>
                     <p>B.E. in Electronics, Communication & Information Engineering from IOE Purwanchal Campus, Dharan.</p>
                 </div>
-                <div id="courses" class="about-detail" style="display: none;">
-                    <h3>Courses Done</h3>
-                    <ul>
-                        <li>Introduction to Python Programming</li>
-                        <li>AI & Machine Learning Fundamentals</li>
-                        <li>Robotics Basics</li>
-                        <li>Web Development Bootcamp</li>
-                    </ul>
-                </div>
+                <div id="achievements" class="about-detail" style="display: none;">
+                  <h3>Achievements</h3>
+                  <div class="achievement-content">
+                    <div class="achievement-text">
+                      <p><strong>1<sup>st</sup> Runner-up in National Level Hardware Hackathon</strong> conducted by EXCESS Nepal at the Delta 4.0 National level technical festival. <br><br>organized at IOE Purwanchal Campus.<br>Theme: Green Technology</p>
+                     
+                  </div>
+                      <div class="achievement-image">
+                        <a href="hackathon.jpg" target="_blank"><img src="hackathon.jpg" alt="Hackathon Certificate"></a>
+                          
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
     </div>
@@ -221,8 +225,7 @@
     </div>
 </section>
 
-
-  <!-- certifications Section -->
+<!-- certifications Section -->
   <section id="certifications">
     <h2>Certifications</h2>
     <div class="certifications-container">
@@ -293,6 +296,7 @@
     <div class="contact-container">
         <div class="form-container animate__animated animate__fadeInUp">
             <h2>Contact Me</h2>
+            
             <form id="contactForm">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -306,6 +310,7 @@
                 <button type="submit" class="btn">Send Message</button>
                 <div id="status"></div>
             </form>
+            <div id="thank-you-message" style="display: none;">Thank you for your message!</div>
         </div>
     </div>
 </section>
@@ -333,6 +338,7 @@
       
   </div>
 </footer>
+
 <script src="script1.js"></script>
 </body>
 </html>
