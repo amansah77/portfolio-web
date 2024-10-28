@@ -489,23 +489,32 @@ button:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-size: cover;
-  background-position: center;
   width: 100%;
   height: 100vh;
-  background-image: url('boy.png');
-  background-color:#17212c;
+  background-color:#110944;
   color: #fff;
+  border-radius: 200px 200px 0 0 ;
+}
+
+.boy-img{
+  height: 90%;
+  width: 60%;
+  padding: -100px;
+  margin-right: -350px;
+  margin-left: -300px;
+  animation:  imageAnimation 1s linear infinite alternate;
+
 }
 /* Contact container */
 .contact-container {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-  max-width: 500px;
-  width: 100%;
+  max-width: 450px;
+  width: 50%;
+  margin-left: -100px;
   background-color: transparent;
-  margin-left: 550px;
+
 }
 
 /* Form styling */
