@@ -677,3 +677,27 @@ button:hover {
     transform: translateY(7px);
   }
 }
+
+nav{
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#navlinks > li{
+  list-style: none;
+
+}
+
+#navlinks{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aman-image{
+  margin-left: -50px;
+  margin-top: -35px;
+}
