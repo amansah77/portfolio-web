@@ -666,3 +666,14 @@ button:hover {
   background-color: #8d3521;
   transition: background-color 0.3s ease-in-out;
 }
+
+
+.intro-image{
+  animation: imageAnimation 1s linear infinite alternate;
+}
+
+@keyframes imageAnimation {
+  to {
+    transform: translateY(7px);
+  }
+}
