@@ -18,7 +18,10 @@
       content="Explore the projects, skills, and experiences of Aman Kumar Sah, a technophile and engineering student."
     />
     <meta property="og:image" content="./images/aman-ipad.jpg" />
-    <meta property="og:url" content="https://amansah77.github.io/portfolio-web/" />
+    <meta
+      property="og:url"
+      content="https://amansah77.github.io/portfolio-web/"
+    />
     <meta property="og:type" content="website" />
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -774,7 +777,29 @@
           <p class="text-neutral-subtle mb-8 max-w-md mx-auto text-sm">
             Have a question or want to work together? Send me a message!
           </p>
-          <form id="contactForm" class="space-y-5">
+          <form
+            id="contactForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="space-y-5"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="cecb189a-5fc5-48fb-b3ab-7b4d5c9da471"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Contact Form Submission from Portfolio"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
             <div>
               <label for="name" class="sr-only">Name</label>
               <input

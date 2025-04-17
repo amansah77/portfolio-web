@@ -70,30 +70,52 @@ const thankYouMessage = document.getElementById("thank-you-message");
 if (contactForm && formStatus && thankYouMessage) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+
     formStatus.textContent = "Sending...";
     formStatus.classList.remove("text-red-500", "text-green-500");
-    const submitButton = contactForm.querySelector('button[type="submit"]');
     if (submitButton) submitButton.disabled = true;
 
-    setTimeout(() => {
-      const isSuccess = Math.random() > 0.2;
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let jsonResponse = await response.json();
+        if (response.status == 200) {
+          formStatus.textContent = "";
+          contactForm.reset();
+          contactForm.style.display = "none";
+          thankYouMessage.classList.remove("hidden");
 
-      if (isSuccess) {
-        formStatus.textContent = "";
-        contactForm.reset();
-        contactForm.style.display = "none";
-        thankYouMessage.classList.remove("hidden");
-        setTimeout(() => {
-          thankYouMessage.classList.add("hidden");
-          contactForm.style.display = "block";
+          setTimeout(() => {
+            thankYouMessage.classList.add("hidden");
+            contactForm.style.display = "block";
+            if (submitButton) submitButton.disabled = false;
+          }, 5000);
+        } else {
+          console.error("Submission Error:", jsonResponse);
+          formStatus.textContent =
+            jsonResponse.message || "Failed to send message. Please try again.";
+          formStatus.classList.add("text-red-500");
           if (submitButton) submitButton.disabled = false;
-        }, 5000);
-      } else {
-        formStatus.textContent = "Failed to send message. Please try again.";
+        }
+      })
+      .catch((error) => {
+        console.error("Fetch Error:", error);
+        formStatus.textContent =
+          "An error occurred. Please check your connection and try again.";
         formStatus.classList.add("text-red-500");
         if (submitButton) submitButton.disabled = false;
-      }
-    }, 1500);
+      });
   });
 }
 
