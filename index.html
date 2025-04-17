@@ -17,8 +17,11 @@
       property="og:description"
       content="Explore the projects, skills, and experiences of Aman Kumar Sah, a technophile and engineering student."
     />
-    <meta property="og:image" content="./images/aman-ipad.jpg" />
-    <meta property="og:url" content="https://amansah77.github.io/portfolio-web/" />
+    <meta property="og:image" content="https://amansah77.github.io/portfolio-web/images/aman-ipad.jpg" />
+    <meta
+      property="og:url"
+      content="https://amansah77.github.io/portfolio-web/"
+    />
     <meta property="og:type" content="website" />
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -205,7 +208,7 @@
         >
           <div class="lg:w-2/5 flex justify-center">
             <img
-              src="./images/mandir-aghadi.jpg"
+              src="./images/aman-dai.jpeg"
               alt="Aman Sah Profile"
               class="w-64 h-auto md:w-72 max-w-xs rounded-lg shadow-lg object-cover transform transition duration-300 hover:scale-105"
             />
@@ -774,7 +777,29 @@
           <p class="text-neutral-subtle mb-8 max-w-md mx-auto text-sm">
             Have a question or want to work together? Send me a message!
           </p>
-          <form id="contactForm" class="space-y-5">
+          <form
+            id="contactForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="space-y-5"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="0f28f21c-a8de-4180-b492-f91372b5eb44"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Contact Form Submission from Portfolio"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
             <div>
               <label for="name" class="sr-only">Name</label>
               <input
@@ -869,7 +894,7 @@
           <a
             href="mailto:amansah113.as9@gmail.com"
             class="text-primary hover:text-primary-dark transition-colors duration-200 underline"
-            >amansah113.as9@gmail.com</a
+            >amansah112.as9@gmail.com</a
           >
         </p>
         <p class="text-xs">
